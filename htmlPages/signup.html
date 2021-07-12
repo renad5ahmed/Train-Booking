@@ -1,0 +1,37 @@
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/validation.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+  <h2>Sign up form</h2>
+  {% csrf_token %}
+  <div class="container">
+    <table>
+      <tr>
+        <td><label type="username"><b>username</b></label></td>
+        <td><input type="text" id="username" name="username" required> </td>
+      </tr>
+      <tr>
+         <td> <label for="email"><b>Email</b></label></td>
+    <td><input type="text" name="email" id="email" required> <td>
+</tr> <tr>
+    <td><label for="pass"><b>Password</b></label></td>
+    <td><input type="password" name="pass" id= "password" required> </td>
+</tr> <tr>
+    <td><label for="pass-repeat"><b>Confirm Password</b></label></td>
+    <td><input type="password" name="pass-repeat" id= "password2" required> </td>
+</tr> <tr>
+    <td><label for="adminOr"><b>As Admin</b></label></td>
+    <td><input type="checkbox" name="adminOr" id="isadmin"></td>
+</tr>
+</table>
+    <button class='button' type="button" onclick="submit();" >Sign Up</button>
+
+</div>
+</body>
