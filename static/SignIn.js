@@ -1,16 +1,19 @@
 function Submit(){
     if(!document.getElementById("username").value){      
+      alert("Username is required")
       return;
     }
     if(!document.getElementById("password").value){
-      name=" "
+      alert("Password is required")
       return;
     }
     const name=document.getElementById("username").value;
     const password=document.getElementById("password").value;
     const admin=document.getElementById("isadmin").checked;
 
+    console.log(admin)
     var user = { 'username': name,'password': password, 'isadmin': admin}; // Add all attributes
+
     var csrftoken = document.cookie.split('csrftoken=')[1];//zy el cookies, bakhod bs tany goz2 mn elgomla b split
     $.ajaxSetup({
         beforeSend: function(xhr, settings) {
@@ -34,6 +37,7 @@ function Submit(){
         alert("Wrong Username or Password, try again!")
         name.value=" "
         password.value=" "
+        alert(admin.value)
         // alert the error if any error occured
         window.location="/signin";
     }
