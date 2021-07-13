@@ -1,14 +1,19 @@
 function submit(){
+  console.log("HEllo")
   if(!document.getElementById("username").value){
+    alert("Username is required")
     return;
   }
   if(!document.getElementById("email").value){
+    alert("Email is required")
     return;
   }
   if(!document.getElementById("password").value){
-    return;
+    alert("Password is required")
+    return;  
   }
   if(!document.getElementById("password2").value){
+    alert("Confirmation password is required")
     return;
   }
   const name=document.getElementById("username").value;
@@ -17,9 +22,9 @@ function submit(){
   const password2= document.getElementById("password2").value;
   const admin=document.getElementById("isadmin").checked;
   console.log(admin)
-  
+
   if(password != password2){
-    alert("Confirm password must be the same as password")  ;
+    alert("Confirmation password must be the same as password")  ;
     return;
   }
   var user = { 'username': name, 'email': email, 'password': password, 'isadmin': admin}; // Add all attributes
