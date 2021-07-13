@@ -17,39 +17,54 @@ def signup_user(request):
     username = request.POST.get('username', None)
     password = request.POST.get('password', None)
     email = request.POST.get('email', None)
-    is_admin = request.POST.get('isadmin', None)
-    if is_admin == 'false':
-        is_admin = False
+    admin = request.POST.get('isadmin', None)
+    
+    if admin=='false':
+        admin=False
     else:
-        is_admin = True
+        admin=True
+    print("el2ola ahy")
+    print(admin)#1
     is_taken =  User.objects.filter(username__iexact=username).exists()# filter returns an array
     response = {# initializing dictionary
         'is_taken': is_taken
     }
     if not is_taken:#new one
-        user = User.objects.create(username=username, email=email, password=password, is_admin=is_admin)
+        admin= True
+        user = User.objects.create(username=username, email=email, password=password,is_admin=admin)
+        print(user.is_admin)#2
         request.session['userid'] = user.id # global variable
         response['username'] = user.username
-        response['userid'] = user.id
+        response['useris'] = user.id
+        response['is_admin']=user.is_admin
     return JsonResponse(response)
 
 def signin_user(req):
     username = req.POST.get('username', None)#.get returns one element
     password = req.POST.get('password', None)
+    Admin= req.POST.get('isadmin', None)
     response = {}# initializing dictionary
-    user = User.objects.filter(username__iexact=username, password__iexact=password)#confirming username& pass
+    print(Admin)#3
+    if Admin=='false':
+        Admin=False
+    elif Admin=='true':
+        Admin=True    
+    print(Admin)#4
+    print(User.objects.last().is_admin)
+    user = User.objects.filter(username__iexact=username, password__iexact=password,is_admin=Admin)#confirming username& pass
     is_found = user.exists()
     if is_found:
         user = user[0]
         response['username'] = user.username
         response['userid'] = user.id
+        response['isadmin']=Admin
         response['is_found']=True
         return JsonResponse(response)
     else:
         response['is_found']=False
         errors = 'User not found, please re-try to login'
-        username.value=" "
-        password.value=" "
+        username=" "
+        password=" "
         response['error']=errors
         return JsonResponse(response)
 
@@ -94,7 +109,8 @@ class SignInView(generic.CreateView):
          if form.is_valid():
               username = request.POST.get('username')
               password = request.POST.get('password')
-              user = User.objects.filter(username=username, password=password)#query of django .filter->where ... get->ex. get the id htrg3 7aga wa7da bs
+              isadmin = request.POST.get('isadmin')
+              user = User.objects.filter(username=username, password=password, isadmin=isadmin)#query of django .filter->where ... get->ex. get the id htrg3 7aga wa7da bs
               if len(user):#first user ever
                   user = user[0]
                   user_id = user.id
