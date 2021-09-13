@@ -1,0 +1,38 @@
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/UpdateTrain.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/updatetrain.css' %}">
+  
+  </head>
+  <body>
+    <h2>Update Train form</h2>
+    {% csrf_token %}
+    <div class="container">
+      <table>
+        <tr>
+            <td><label type="train id"><b>Old Train ID</b></label></td>
+            <td><input type="text" id="oldTrainId" name="oldid" required> </td>
+          </tr>
+        <tr>
+          <td><label type="train id"><b>Train ID</b></label></td>
+          <td><input type="text" id="trainID" name="id" required> </td>
+        </tr>
+        <tr>
+           <td> <label for="color"><b>Train Color</b></label></td>
+      <td><input type="text" name="color" id="trainColor" required> <td>
+  </tr> <tr>
+      <td><label for="time"><b>Maximum Trip Time</b></label></td>
+      <td><input type="number" name="time" id= "maxTripTime" required> </td>
+  </tr> 
+     
+  </table>
+  
+      <button class='button' type="button" onclick="edit();" >Save</button>
+  
+  </div>
+  </body>
+  

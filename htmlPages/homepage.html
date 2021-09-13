@@ -10,6 +10,39 @@
 
 {% block content %}
     {% csrf_token %}
- <h2> Welcome  {{ user }} 
+ <h2 id="user"> Welcome  {{ user }} 
  </h2>
+
+  <div><a href="./addtrain.html">
+      <input type="button" value="Add Train" class='button'/>
+    </a>
+  </div>
+  <div>
+    <a href="./updatetrain.html">
+      <input type="button" value="search train" class="button" />
+    </a></div>
+
+    <div>
+        <a href="./udatescopedtrain.html">
+          <input type="button" value="update train" class="button" />
+        </a></div>
+
+        <div>
+            <a href="./hello.html">
+              <input type="button" value="Add trip" class="button" />
+            </a></div>
+            <div>
+              <a href="./tripmodify.html">
+                <input type="button" value="Update Trip" class="button" />
+              </a></div>
+
+
+              <div>
+                <a href="./showlistt.html">
+                  <input type="button" value="List Trips" class="button" />
+                </a></div>
+  
+
+
+
 {% endblock %}

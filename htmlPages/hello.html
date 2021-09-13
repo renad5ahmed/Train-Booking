@@ -1,0 +1,51 @@
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js\AddTrip.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/addtrip.css' %}">
+
+</head>
+<body>
+  <h1>Add Trip form</h1>
+  {% csrf_token %}
+  <div class="container">
+    <table>
+      <tr>
+        <td><label type="trip id"><b>Trip ID</b></label></td>
+        <td><input type="text" id="tripID" name="id" required> </td>
+      </tr>
+      <tr>
+         <td> <label for="source"><b>Source</b></label></td>
+    <td><input type="text" name="source" id="source" required> <td>
+</tr> <tr>
+    <td><label for="destination"><b>Destination</b></label></td>
+    <td><input type="text" name="destination" id= "destination" required> </td>
+</tr> <tr>
+    <td><label for="tripTime"><b>Trip Time</b></label></td>
+    <td><input type="number" name="tripTime" id= "tripTime" required> </td>
+</tr> <tr>
+    <td><label for="requiredNumberOfSeats"><b>Required Number Of Seats</b></label></td>
+    <td><input type="number" name="requiredNumberOfSeats" id= "requiredNumberOfSeats" required> </td>
+</tr> <tr>
+    <td><label for="availableNumberOfSeats"><b>Available Number Of Seats</b></label></td>
+    <td><input type="number" name="availableNumberOfSeats" id= "availableNumberOfSeats" required> </td>
+</tr> <tr>
+    <td><label for="train ID"><b>Train ID</b></label></td>
+    <td><input type="text" name="trainID" id= "trainID" required> </td>
+</tr> <tr>
+    <td><label for="cost"><b>Trip Cost</b></label></td>
+    <td><input type="number" name="cost" id= "cost" required> </td>
+</tr> <tr>
+    <td><label for="date"><b>Trip Date</b></label></td>
+    <td><input type="text" name="date" id= "date" required> </td>
+</tr> <tr>
+    <td><label for="time"><b>Trip Time</b></label></td>
+    <td><input type="text" name="time" id= "time" required> </td>
+</tr> 
+    </table>
+    <button class='button' type="button" onclick="add();" >ADD</button>
+</div>
+</body>

@@ -1,0 +1,32 @@
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js\UpdateTrain.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/updatetrain.css' %}">
+
+</head>
+<body>
+  <h2>Update Train form</h2>
+  {% csrf_token %}
+  <div class="wrapper">
+    <div class="container">
+      <input type="text" class="input" id="scoped" placeholder="What Train ID you looking for?" required>
+      <input type="button" value="search" class="close-btn" onclick="search()">
+    </div>
+    
+  </div>
+  
+    
+    <div>
+        <a href="/htmlpages/udatescopedtrain.html" id="result" > </a>
+    </div>
+    <div id="result1">
+      
+  </div>
+  <div id="result2">
+      
+  </div>
+</body>

@@ -1,0 +1,37 @@
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js\ShowList.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/addtrip.css' %}">
+</head>
+<body>
+  <h2>show list form</h2>
+  {% csrf_token %}
+  <div class="container">
+    <table>
+      <tr>
+        <td><label type="Date"><b>Date</b></label></td>
+        <td><input type="text" id="date" name="date"> </td>
+      </tr>
+      <tr>
+         <td> <label for="time"><b>Time</b></label></td>
+    <td><input type="text" name="time" id="time" > <td>
+</tr> 
+<tr>
+    <td><label for="source"><b>Source</b></label></td>
+    <td><input type="source" name="source" id= "source" > </td>
+</tr><tr>
+    <td><label for="destination"><b>Destination</b></label></td>
+    <td><input type="text" name="destination" id= "destination" > </td>
+</tr> <tr>
+    <td><label for="requiredNumberOfSeats"><b>Required Number Of Seats</b></label></td>
+    <td><input type="number" name="requiredNumberOfSeats" id= "requiredNumberOfSeats" > </td>
+</tr> 
+    </table>
+    <button class='button' type="button" onclick="search();" >Search</button>
+
+</div>
+</body>

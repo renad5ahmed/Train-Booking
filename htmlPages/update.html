@@ -1,0 +1,51 @@
+head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+{% block title %}<h1>Home page</h1>{% endblock %}
+
+{% block content %}
+    {% csrf_token %}
+ <h2> Welcome  {{ user }} 
+ </h2>
+
+ <form action="/action_page.php">
+    <label for="userName">Name {{user.userName}}</label>
+    <br>
+    <input type="text" id="userName" name="userName">
+    <br><br>
+
+    <label for="numberOfPersons"> Number Of Persons</label>
+    <br>
+    <input type="number" id="numberOfPersons" name="numberOfPersons">
+    <br><br>
+
+    <label for="time">Time</label>
+    <br>
+    <input type="time" id="time" name="time">
+    <br><br>
+
+    <label for="date">Date</label>
+    <br>
+    <input type="date" id="date" name="date">
+    <br><br>
+
+    <label for="paymentMethod">Payment Method : </label>
+    <br><br>
+
+    <input type="radio" id="cash" name="paymentMethod" value="Cash">
+    <label for="cash">Cash</label>
+    <input type="radio" id="mastercard" name="paymentMethod" value="mastercard">
+    <label for="masterCard">Mastercard</label>
+    <input type="radio" id="visa" name="paymentMethod" value="visa">
+    <label for="visa">Visa</label>
+    <br>
+
+    <input type="button" class="button1" onclick="window.location.href='#';" value="Submit">
+    <input type="button" class="button2" onclick="window.location.href='Home.html';" value="Back">
+</form>
+  </div>

@@ -5,28 +5,32 @@
   <title>Sign In</title>
   <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/SignIn.js' %}"></script>
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/signin.css' %}">
 
 </head>
-  <body>
-    <h1>Sign In</h1>
-    {% csrf_token %}
-    <div class="container">
-      <table>
-        <tr>
-          <td><label type="username"><b>username</b></label></td>
-          <td><input type="text" id="username" name="username" required> </td>
-        </tr>
-  <tr>
-      <td><label for="pass"><b>Password</b></label></td>
-      <td><input type="password" name="pass" id= "password" required> </td>
-  </tr> <tr>
-      <td><label for="adminOr"><b>As Admin</b></label></td>
-      <td><input type="checkbox" name="adminOr" id="isadmin"></td>
-  </tr>
-  </table>
-      <button class='button' id="SI" type="button" onclick="Submit();" >Sign In</button>
-  </div>
+<body>
+  <h1>Sign In</h1>
+  
+  <div class="container">
+    <table>
+      <tr>
+        <td><label type="username"><b>Username</b></label></td>
+        <td><input type="text" id="username" name="username" required> </td>
+      </tr>
+<tr>
+    <td><label for="pass"><b>Password</b></label></td>
+    <td><input type="password" name="pass" id= "password" required> </td>
+</tr> <tr>
+    <td><label for="adminOr"><b>As Admin</b></label></td>
+    <td><input type="checkbox" name="adminOr" id="isadmin"></td>
+</tr>
+</table>
+    <button class='button' id="SI" type="button" onclick="Submit();" >Sign In</button>
+</div>
 <p>  </p>
-  <p id="demo"></p>
-  </body>
+<p id="demo"></p>
+</body>
+
+
+
+
