@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding :0;
+    margin:0;
+}
+ body
+ {
+    background-image: url("/static/images/IMG_1748.JPG");
+ }
+ h1
+{
+    color: white;
+    font-family:Lucida Handwriting;
+    text-align: center;
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+ .container 
+ { 
+     background:linear-gradient(to right, #4e4e4e, #000000);
+     opacity: 0.8;
+     max-width: 450px;
+     position:relative;
+     left: 530px;
+     border-radius:10px;
+     padding: 5px;
+     margin: 10px 20px;
+     margin-top: 90px;
+     position:relative;
+ }
+label
+{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: beige;
+    font-size: larger;
+    margin-left: 40px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 8px;
+  display:inline-block;
+  border: 3px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+input[type=checkbox]
+{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  height: 30px;
+  width: 25px;
+  
+}
+#isadmin
+{
+  margin-bottom: 1px;
+}
+.button {
+  background-color: black;
+  border:2px solid beige;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 8px;
+  cursor: pointer;
+  left:150px;
+  position: relative;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.155), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button:hover {
+     background-color:rgb(65, 65, 65); 
+     color: white;
+}

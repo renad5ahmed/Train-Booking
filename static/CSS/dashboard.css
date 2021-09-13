@@ -1,0 +1,46 @@
+*{
+    padding :0;
+    margin:0;
+}
+.c
+{
+   margin-top: 120px;
+}
+body
+{
+   background-image: url("/static/images/train1\ v2.jpg");
+}
+
+h1
+{
+   color: white;
+   font-family:Lucida Handwriting;
+   text-align: center;
+   margin-top: 150px;
+   background-color: rgb(0,0,0,0.5);
+}
+input[type=button]
+{
+ background-color: #000000;
+ border:2px solid chocolate;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ display: inline-block;
+ cursor: pointer;
+ font-size: 16px;
+ margin: 6px 9px;
+ box-shadow: 0 8px 16px 0 rgba(255,255,255,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-left: 690px;
+  margin-top: 10px;
+}
+input[type=button]:hover
+{
+  background-color:chocolate; 
+  color: white;
+}
+input[type=button]:active
+{
+ background-color: rgb(66, 61, 61);
+ color: white;
+}
